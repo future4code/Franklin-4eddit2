@@ -1,13 +1,11 @@
-
+import GlobalStyle from "./assets/styles/global";
 function App() {
   return (
     <>
-    <h1>
-   LabEddit
-   </h1>
+    <GlobalStyle />
+      <h1>LabEddit</h1>
     </>
-   
-  )
+  );
 }
 
 export default App;
