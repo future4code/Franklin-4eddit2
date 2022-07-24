@@ -1,13 +1,12 @@
-
+import GlobalStyle from "./assets/styles/global";
+import HomePage from "./pages/Home/Home";
 function App() {
   return (
     <>
-    <h1>
-   LabEddit
-   </h1>
+    <GlobalStyle />
+      <HomePage />
     </>
-   
-  )
+  );
 }
 
 export default App;
