@@ -1,6 +1,7 @@
 import React from "react";
 import { BASE_URL } from "../../constants/url";
 import useRequestData from "../../hooks/useRequestData";
+import { BoxStyle } from "../../components/PostCard/styled";
 
 const FeedComments = () => {
 
@@ -8,14 +9,17 @@ const FeedComments = () => {
 
     const postComments = comments.map((comment) => {
         return(
-            <p>{comment.body}</p>
+            <>
+                <p>{comment.username}</p>
+                <p>{comment.body}</p>
+            </>
         )
     })
 
     return (
-        <div>
+        <BoxStyle>
             {postComments}
-        </div>
+        </BoxStyle>
     )
 }
 
