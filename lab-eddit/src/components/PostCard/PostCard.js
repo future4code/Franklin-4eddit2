@@ -15,9 +15,11 @@ const PostCard = (props) => {
             <Icons>
             <ContainerIconsSetas>
                 <img src={setaBaixo} alt=""/>
+                <p>{props.voteSum}</p>
                 <img src={setaCima} alt=""/>
             </ContainerIconsSetas>
             <ContainerIconComentario>
+                <p>{props.commentCount}</p>
                 <img src={Vector} alt=""/>
             </ContainerIconComentario>
             </Icons>

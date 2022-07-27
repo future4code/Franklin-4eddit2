@@ -4,15 +4,12 @@ import axios from "axios";
 import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/url";
 import PostCard from "../../components/PostCard/PostCard";
+import useForm from "../../hooks/useForm";
 
 
 
 const FeedPage = () => {
-    const [mensagem, setMensagem] = useState('')
-
-    const handleMensagem = (event) => {
-        setMensagem(event.target.value)
-    }
+    const [form, handleInputChange, clear] = useForm({ post: ""})
 
     const posts = useRequestData([], `${BASE_URL}/posts`)
 
@@ -22,28 +19,32 @@ const FeedPage = () => {
                 key={post.id}
                 username={post.username}
                 body={post.body}
+                commentCount={post.commentCount}
+                voteSum={post.voteSum}
             />
         )
     })
 
 
     return(
-        <>
+        <form >
         <ContainerTextArea 
-            value={mensagem} 
-            onChange={handleMensagem} 
+            value={form.post} 
+            onChange={handleInputChange} 
             id="story" 
             name="story"
             rows="5" 
             cols="33" 
             placeholder="  Escreva seu post..."
         />
-        <ButtonPostar>Postar</ButtonPostar>
+        <ButtonPostar
+            type={"submit"}    
+        >Postar</ButtonPostar>
             <Line/>
         <ContainerCards>
             {postCards}
         </ContainerCards>
-        </>
+        </form>
     )
 }
 
