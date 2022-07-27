@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContainerTextArea, ButtonPostar, BoxStyle, Line } from "./styled";
 import { Container } from "../Home/styled";
 import axios from "axios";
+import useRequestData from "../../hooks/useRequestData";
+import { BASE_URL } from "../../constants/url";
+import PostCard from "../../components/PostCard/PostCard";
 
 
 const FeedPage = () => {
@@ -11,21 +14,19 @@ const FeedPage = () => {
         setMensagem(event.target.value)
     }
 
-    /*const body = {
-        title: "Primeiro",
-        body: "post"
-    }
+    const posts = useRequestData([], `${BASE_URL}/posts`)
 
-    axios.post('https://labeddit.herokuapp.com/posts', body, {
-        headers: {
-            "Content-Type": 'application/json',
-            "Authorization": '{{token}}'
-        }
-    }).then((response) => {
-        console.log(response.data)
-    }).catch((error) => {
-        console.log(error.response.datas)
+    const postCards = posts.map((post) => {
+        return(
+            <PostCard 
+                key={post.id}
+                username={post.username}
+                body={post.body}
+            />
+        )
     })
+
+    /*
 
     const enviarMensagem = () => {
       const novasMensagens = {mensagem: setMensagem }
@@ -38,16 +39,20 @@ const FeedPage = () => {
         return <div>
           <h3><p>{mensagem.mensagem}</p></h3>
         </div>
-      })}*/
+      })}
+      
+      */
 
     return(
+        <div>
         <Container>
             <ContainerTextArea value={mensagem} onChange={handleMensagem} id="story" name="story"
             rows="5" cols="33" placeholder="  Escreva seu post..."/>
             <ButtonPostar>Postar</ButtonPostar>
             <Line/>
-            
         </Container>
+        {postCards}
+        </div>
     )
 }
 

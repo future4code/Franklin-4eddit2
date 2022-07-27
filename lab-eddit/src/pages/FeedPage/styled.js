@@ -32,27 +32,6 @@ export const ButtonPostar = styled.button`
     color: #FFF;
 `
 
-/*export const BoxStyle = styled.div`
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 9px 10px;
-    gap: 18px;
-
-    width: 364px;
-    height: 167px;
-
-    background: #FBFBFB;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-`*/
-
 export const Line = styled.hr`
     position: absolute;
     width: 363.01px;
