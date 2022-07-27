@@ -51,3 +51,42 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 transform: rotate(0.32deg);
 margin: 18px 0;
 `
+
+export const Title = styled.h1`
+    /* font-family: ;
+    font-style: ;
+    font-weight: ;
+    font-size: ;
+
+    line-height: ;
+    color: ;
+    font-family: IBM Plex Sans;
+font-size: 33px;
+font-weight: 700;
+line-height: 43px;
+letter-spacing: 0em;
+text-align: left; */
+position: absolute;
+width: 364px;
+height: 86px;
+left: 32px;
+top: 123px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 33px;
+line-height: 43px;
+
+color: #373737;
+
+` 
+export const Subtext = styled.h2`
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+
+color: #000000;
+` 
