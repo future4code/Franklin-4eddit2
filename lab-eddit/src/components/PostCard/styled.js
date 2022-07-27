@@ -29,4 +29,46 @@ export const PostUsername = styled.p`
 
 export const PostBody = styled.p`
     font-size: 18px;
+    height: 70px;
+`
+
+export const Icons = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 174.33px;
+    height: 28px;
+    align-items: flex-end;
+`
+
+export const ContainerIconsSetas = styled.div`
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 4.66667px;
+gap: 15.92px;
+border: 0.796748px solid #ECECEC;
+border-radius: 28px;
+`
+
+export const ContainerIconComentario = styled.div`
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4.66667px;
+gap: 8px;
+margin-left: 10px;
+//position: absolute;
+width: 65.33px;
+height: 28px;
+left: 119px;
+top: 84px;
+
+border: 0.793333px solid #ECECEC;
+border-radius: 28px;
 `
