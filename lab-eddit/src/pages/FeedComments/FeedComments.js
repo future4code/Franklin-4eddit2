@@ -2,24 +2,45 @@ import React from "react";
 import { BASE_URL } from "../../constants/url";
 import useRequestData from "../../hooks/useRequestData";
 import { BoxStyle } from "../../components/PostCard/styled";
+import { useParams } from "react-router-dom";
+import CommentCard from "../../components/CommentCard/CommentCard";
+import InputCard from "../../components/InputCard/InputCard";
+import useForm from "../../hooks/useForm";
 
 const FeedComments = () => {
 
-    const comments = useRequestData([], `${BASE_URL}/posts/53a81747-d99c-4f38-a7f3-8675ee9391b1/comments`)
+    const params = useParams()
+    console.log(params)
 
+    const [form, handleInputChange, clear] = useForm({ post: ""})
+
+    const comments = useRequestData([], `${BASE_URL}/posts/${params.id}/comments`)
+    console.log(comments)
+    
     const postComments = comments.map((comment) => {
         return(
-            <>
-                <p>{comment.username}</p>
-                <p>{comment.body}</p>
-            </>
+            <CommentCard
+                key={comment.id}
+                username={comment.username}
+                body={comment.body}
+                voteSum={comment.voteSum}
+            />
         )
     })
 
     return (
-        <BoxStyle>
+        <div>
+            <h1>FeedComment</h1>
+            <InputCard
+                value={form.post}
+                onChange={handleInputChange}
+                placeholder={"Adicionar comentário..."}
+                acao={"Responder"}
+            />
             {postComments}
-        </BoxStyle>
+        </div>
+
+        
     )
 }
 

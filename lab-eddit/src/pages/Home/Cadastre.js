@@ -6,7 +6,7 @@ export default function Cadastre (){
         <Container>
             {/* cabeçalho */}
             <Title>Olá, seja bem vindo ao LabEddit :)</Title>
-            <Form onSubmit={}>
+            {/* <Form onSubmit={}> */}
                 <Input required type = "text" placeholder = "Nome de usuário" onChange = {onChange()} value = {form.username}/>
                 <Input required type = "email" placeholder = "Email" onChange = {onChange()} value = {form.email}/>
                 <Input required type = "password" placeholder = "Senha" onChange = {onChange()} value = {form.password}/>
@@ -16,8 +16,8 @@ export default function Cadastre (){
                 <p>
                     <Input type="checkbox"> <Subtext>Eu concordo em receber emails sobre coisas legais da LabEddit!</Subtext> </Input>
                 </p>
-                <Button onClick={}> Cadastrar </Button>
-            </Form>
+                {/* <Button onClick={}> Cadastrar </Button> */}
+            {/* </Form> */}
             <Line/>
         </Container>
     )

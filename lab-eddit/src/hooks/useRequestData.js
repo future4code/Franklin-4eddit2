@@ -7,13 +7,13 @@ const useRequestData = (initialData, url) => {
     useEffect(() => {
         axios.get(url, {
             headers: {
-                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM3ZmE3YjhkLTBmZjItNDIzNy04YzYzLTg2ZDlmMDljZmYzMyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1ODk0NTI4NywiZXhwIjoxNjU4OTg4NDg3fQ.sNJ5WwTMVR_K5uZMJf7ztlPAtJ_gtLihZ1nX1tQl24Y"
+                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTAxNjc2MCwiZXhwIjoxNjU5MDU5OTYwfQ.G9R1H8cQwjQTGDO87CoF-jlgyaL21lY2CTqiRcy5nvU"
             }
         }).then((response) => {
             setData(response.data)
         }).catch((error) => {
             console.log(error)
-            alert('Ocorreu um erro, tente novamente')
+            alert('useRequestData: Ocorreu um erro, tente novamente')
         })
     }, [url])
 

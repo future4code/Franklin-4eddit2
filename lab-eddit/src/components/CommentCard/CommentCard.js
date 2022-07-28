@@ -2,10 +2,8 @@ import React from "react";
 import { BoxStyle, PostBody, PostUsername, Icons, ContainerIconsSetas, ContainerIconComentario } from "./styled";
 import setaBaixo from "../../assets/images/setaBaixo.svg";
 import setaCima from "../../assets/images/setaCima.svg";
-import Vector from "../../assets/images/Vector.svg";
 
-
-const PostCard = (props) => {
+const CommentCard = (props) => {
 
 
     return (
@@ -18,13 +16,9 @@ const PostCard = (props) => {
                 <p>{props.voteSum}</p>
                 <img src={setaCima} alt=""/>
             </ContainerIconsSetas>
-            <ContainerIconComentario onClick={props.onClick}>
-                <p>{props.commentCount}</p>
-                <img src={Vector} alt=""/>
-            </ContainerIconComentario>
             </Icons>
         </BoxStyle>
     )
 }
 
-export default PostCard;
+export default CommentCard;
