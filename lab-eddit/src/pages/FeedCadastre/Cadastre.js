@@ -1,11 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { goToCadastre } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/url";
 import useForm from "../../hooks/useForm";
 import { Container} from "../Home/styled";
-import { Title, InputUser, InputEmail, InputPassword, ButtonSignup, Form } from "./styled";
+import { Title, InputUser, InputEmail, InputPassword, ButtonSignup, Form, Subtext } from "./styled";
 
 
 
@@ -32,11 +32,14 @@ export default function Cadastre (){
             {/* cabeçalho */}
             <Title>Olá, seja bem vindo ao LabEddit</Title>
             <Form onSubmit={submitForms}>
-                {/* <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username}/> */}
+                <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username}/>
                 {/* <Input required type = "text" placeholder = "Nome de usuário" onChange = {onChange(onChange)} value = {form.username}/> */}
-                {/* <InputEmail required type = "email" placeholder = "Email" value = {form.email}/> */}
-                {/* <InputPassword required type = "password" placeholder = "Senha" value = {form.password}/> */}
+                <InputEmail required type = "email" placeholder = "Email" value = {form.email}/>
+                <InputPassword required type = "password" placeholder = "Senha" value = {form.password}/>
             
+                <Subtext>
+                    <p>Ao continuar, você concorda com o nosso</p>
+                </Subtext>
                 {/* <Subtext>Ao continuar, você concorda com o nosso <link href="###">Contrato de Usuário</link> e a nossa <link href="###">Política de Privacidade</link></Subtext> */}
 {/* 
                 <p> 

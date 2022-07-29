@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
 //CSS Cadastre
+export const Form = styled.form`
+margin-bottom: 56px;
+/* display: flex; */
+/* align-items: center; */
+/* flex-direction: column; */
+/* font-family: 'Times New Roman', Times, serif; */
+/* font-style: normal; */
+/* width: 100%; */
+/* margin-top: 194px; */
+`
+
 export const Title = styled.h1`
 position: absolute;
 width: 364px;
-height: 86px;
+/* height: 86px; */
 left: 32px;
 top: 123px;
 
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 700;
+/* font-family: 'IBM Plex Sans'; */
+/* font-style: normal; */
+/* font-weight: 700; */
 font-size: 33px;
-line-height: 43px;
+/* line-height: 43px; */
 
 color: #373737;
-
-` 
-
-export const Subtext = styled.h2`
-font-family: 'Noto Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 19px;
-
-color: #000000;
-` 
+`  
 export const ButtonSignup = styled.button`
 width: 100%;
 height: 51px;
@@ -54,7 +54,7 @@ top: 785px;
 bottom: 90px;
 `
 
-export const Input = styled.input`
+export const InputUser = styled.input`
 width: 22.69rem;
 height: 3.75rem;
 left: 1.625rem;
@@ -74,7 +74,7 @@ export const InputEmail = styled.input`
 width: 22.69rem;
 height: 3.75rem;
 left: 1.625rem;
-top: 25.19rem;
+top: 29.43rem;
 box-sizing: border-box;
 background: #FFFFFF;
 border: 1px solid #D5D8DE;
@@ -91,7 +91,7 @@ export const InputPassword = styled.input`
 width: 22.69rem;
 height: 3.75rem;
 left: 1.625rem;
-top: 25.19rem;
+top: 33.69rem;
 box-sizing: border-box;
 background: #FFFFFF;
 border: 1px solid #D5D8DE;
@@ -103,13 +103,10 @@ font-size: 18px;
 opacity: 0.8;
 padding: 10px;
 `
-export const Form = styled.form`
-margin-bottom: 56px;
-display: flex;
-align-items: center;
-flex-direction: column;
-font-family: 'Times New Roman', Times, serif;
-font-style: normal;
-width: 100%;
-margin-top: 194px;
+export const Subtext = styled.p`
+width: 90%;
+font-family: 'IBM Plex Sans', sans-serif;
+font-size: 14px;
+line-height: 19px;
+text-align: left
 `
