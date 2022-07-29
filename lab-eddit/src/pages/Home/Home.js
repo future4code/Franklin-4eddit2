@@ -7,11 +7,13 @@ import { signup } from "../../services/user"
 
 function HomePage({goToCadastre}) {
   const navigate = useNavigate()
-  const [form, onChange, clear] = useForm({nome:'', password:''})
+  const [form, onChange, clear] = useForm({email:'', password:''})
   const onSubmitLogin = (event) => {
     event.preventDefault()
-    signup(form, clear, navigate)
+  signup(form, navigate, clear)
+  
   }
+ 
 
   return (
     <Container>
@@ -19,14 +21,14 @@ function HomePage({goToCadastre}) {
       <p>O projeto de rede social da Labenu</p>
       <Form>
         <Input
-          name="nome"
+          name={'email'}
           onChange={onChange}
           placeholder="Nome"
           required
           value={form.nome}
         />
         <Input
-          name="password"
+          name={'password'}
           onChange={onChange}
           placeholder="Senha"
           type={"password"}
