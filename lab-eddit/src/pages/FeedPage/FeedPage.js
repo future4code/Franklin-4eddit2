@@ -12,11 +12,28 @@ import InputCard from "../../components/InputCard/InputCard";
 
 
 const FeedPage = () => {
-    const [form, handleInputChange, clear] = useForm({ post: ""})
+    const [form, handleInputChange, clear] = useForm({ title: "grupo2", body: ""})
 
     const posts = useRequestData([], `${BASE_URL}/posts`)
 
     const navigate = useNavigate()
+
+    const createPost = () => {
+        axios.post(`${BASE_URL}/posts`, form, {
+            headers: {
+                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTA1NjkzMSwiZXhwIjoxNjU5MTAwMTMxfQ.ik6Jz6I80yuIGJXRTdT2siAowGcQrRZ4ECpLUlc_1OY"
+            }
+        }).then((response) => {
+            alert(response.data)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        createPost()
+    }
 
     const onClickComments = (id) => {
         goToFeedComments(navigate, id)
@@ -37,7 +54,7 @@ const FeedPage = () => {
 
 
     return(
-        <form >
+        <form onSubmit={onSubmitForm} >
         {/* <ContainerTextArea 
             value={form.post} 
             onChange={handleInputChange} 
@@ -52,7 +69,8 @@ const FeedPage = () => {
         >Postar</ButtonPostar>
             <Line/> */}
         <InputCard
-            value={form.post}
+            name={"body"}
+            value={form.body}
             onChange={handleInputChange}
             placeholder={"Escreva seu post..."}
             acao={"Postar"}

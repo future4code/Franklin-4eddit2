@@ -7,7 +7,7 @@ const useRequestData = (initialData, url) => {
     useEffect(() => {
         axios.get(url, {
             headers: {
-                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTAxNjc2MCwiZXhwIjoxNjU5MDU5OTYwfQ.G9R1H8cQwjQTGDO87CoF-jlgyaL21lY2CTqiRcy5nvU"
+                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTA1NjkzMSwiZXhwIjoxNjU5MTAwMTMxfQ.ik6Jz6I80yuIGJXRTdT2siAowGcQrRZ4ECpLUlc_1OY"
             }
         }).then((response) => {
             setData(response.data)
