@@ -4,7 +4,7 @@ import { Container, Input, Button, Line, Form, Title, Subtext } from "./styled";
 export default function Cadastre (){
     return(
         <Container>
-            {/* cabeçalho */}
+            {/* cabeçalho
             <Title>Olá, seja bem vindo ao LabEddit :)</Title>
             <Form onSubmit={}>
                 <Input required type = "text" placeholder = "Nome de usuário" onChange = {onChange()} value = {form.username}/>
@@ -18,7 +18,7 @@ export default function Cadastre (){
                 </p>
                 <Button onClick={}> Cadastrar </Button>
             </Form>
-            <Line/>
+            <Line/> */}
         </Container>
     )
 }
