@@ -11,6 +11,7 @@ function HomePage({goToCadastre}) {
   const onSubmitLogin = (event) => {
     event.preventDefault()
   signup(form, navigate, clear)
+  
   }
  
 

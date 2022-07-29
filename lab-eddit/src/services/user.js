@@ -10,7 +10,6 @@ export const signup = (body, navigate, clear) => {
         }).catch((error) => {
             alert("Falha ao logar, verifique suas credenciais !!")
             clear()
-            console.log(error)
             
         })
     }
