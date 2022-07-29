@@ -7,7 +7,7 @@ import { signup } from "../../services/user"
 
 function HomePage({goToCadastre}) {
   const navigate = useNavigate()
-  const {form, onChange, clear} = useForm({nome:'', password:''})
+  const [form, onChange, clear] = useForm({nome:'', password:''})
   const onSubmitLogin = (event) => {
     event.preventDefault()
     signup(form, clear, navigate)
