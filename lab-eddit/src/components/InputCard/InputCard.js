@@ -17,7 +17,7 @@ const InputCard = (props) => {
             />
             <Button type={"submit"}>{props.acao}</Button>
             <Line />
-        </div>
+        </div> 
     )
 }
 
