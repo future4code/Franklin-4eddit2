@@ -55,29 +55,16 @@ const FeedPage = () => {
 
     return(
         <form onSubmit={onSubmitForm} >
-        {/* <ContainerTextArea 
-            value={form.post} 
-            onChange={handleInputChange} 
-            id="story" 
-            name="story"
-            rows="5" 
-            cols="33" 
-            placeholder="  Escreva seu post..."
-        />
-        <ButtonPostar
-            type={"submit"}    
-        >Postar</ButtonPostar>
-            <Line/> */}
-        <InputCard
-            name={"body"}
-            value={form.body}
-            onChange={handleInputChange}
-            placeholder={"Escreva seu post..."}
-            acao={"Postar"}
-        />
-        <ContainerCards>
-            {postCards}
-        </ContainerCards>
+            <InputCard
+                name={"body"}
+                value={form.body}
+                onChange={handleInputChange}
+                placeholder={"Escreva seu post..."}
+                acao={"Postar"}
+            />
+            <ContainerCards>
+                {postCards}
+            </ContainerCards>
         </form>
     )
 }
