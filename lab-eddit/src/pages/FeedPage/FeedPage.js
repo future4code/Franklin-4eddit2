@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
 import { Head } from "../../components/Head/Head";
-
+import { Menu } from "../../components/Menu/Menu";
 
 const FeedPage = () => {
     const navigate = useNavigate()
@@ -56,6 +56,7 @@ const FeedPage = () => {
     return(
         <form onSubmit={onSubmitForm} >
             <Head/>
+            <Menu nome = {"Logout"}></Menu>
             <InputCard
                 name={"body"}
                 value={form.body}
