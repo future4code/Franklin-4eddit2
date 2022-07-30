@@ -8,7 +8,7 @@ import { BASE_URL } from '../../constants/url'
 jest.mock('axios')
 
 jest.mock('react-router-dom', () => ({
-    __esModule: true, //ES6 module
+    __esModule: true, 
    useNavigate: jest.fn()
 })) 
 
@@ -35,7 +35,7 @@ describe("Na página de Feed", () => {
 
       const listPosts = await findAllByText(/mensagem/i)
       expect(axios.get).toHaveBeenCalledTimes(1)
-    // expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}/posts`)
+    //  expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}/posts`)
      expect(listPosts).toHaveLength(2)
     });
 })
