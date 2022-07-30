@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png";
 import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 import { signIn } from "../../services/user"
+import { Head } from "../../components/Head/Head";
 
 function HomePage({goToCadastre}) {
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ function HomePage({goToCadastre}) {
 
   return (
     <Container>
+      <Head/>
       <Logo src={logo} alt="Logo contendo o nome LabEddit" />
       <p>O projeto de rede social da Labenu</p>
       <Form>

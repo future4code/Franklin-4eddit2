@@ -8,6 +8,8 @@ import InputCard from "../../components/InputCard/InputCard";
 import useForm from "../../hooks/useForm";
 import axios from "axios";
 import useProtected from "../../hooks/useProtected";
+import { Head } from "../../components/Head/Head";
+
 
 const FeedComments = () => {
   useProtected();
@@ -54,17 +56,18 @@ const FeedComments = () => {
   });
 
   return (
-    <form onSubmit={onSubmitForm}>
-      <h1>FeedComment</h1>
-      <InputCard
-        name={"body"}
-        value={form.body}
-        onChange={handleInputChange}
-        placeholder={"Adicionar comentário..."}
-        acao={"Responder"}
-      />
-      {postComments}
-    </form>
+     <form onSubmit={onSubmitForm}>
+            <Head/>
+            <h1>FeedComment</h1>
+            <InputCard
+                name={"body"}
+                value={form.body}
+                onChange={handleInputChange}
+                placeholder={"Adicionar comentário..."}
+                acao={"Responder"}
+            />
+            {postComments}
+        </form>
   );
 };
 

@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
 import useProtected from "../../hooks/useProtected";
+import { Head } from "../../components/Head/Head";
 
 const FeedPage = () => {
   const navigate = useNavigate();
@@ -61,19 +62,22 @@ const FeedPage = () => {
     );
   });
 
-  // useEffect((createPost), [])
-  return (
-    <form onSubmit={onSubmitForm}>
-      <InputCard
-        name={"body"}
-        value={form.body}
-        onChange={handleInputChange}
-        placeholder={"Escreva seu post..."}
-        acao={"Postar"}
-      />
-      <ContainerCards>{postCards}</ContainerCards>
-    </form>
-  );
-};
+    // useEffect((createPost), [])
+    return(
+        <form onSubmit={onSubmitForm} >
+            <Head/>
+            <InputCard
+                name={"body"}
+                value={form.body}
+                onChange={handleInputChange}
+                placeholder={"Escreva seu post..."}
+                acao={"Postar"}
+            />
+            <ContainerCards>
+                {postCards}
+            </ContainerCards>
+        </form>
+    )
+}
 
 export default FeedPage;
