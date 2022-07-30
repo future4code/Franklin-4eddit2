@@ -10,18 +10,18 @@ import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
 
 
-
 const FeedPage = () => {
+    const navigate = useNavigate()
     const [form, handleInputChange, clear] = useForm({ title: "grupo2", body: ""})
 
     const posts = useRequestData([], `${BASE_URL}/posts`)
 
-    const navigate = useNavigate()
+   
 
     const createPost = () => {
         axios.post(`${BASE_URL}/posts`, form, {
             headers: {
-                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTA1NjkzMSwiZXhwIjoxNjU5MTAwMTMxfQ.ik6Jz6I80yuIGJXRTdT2siAowGcQrRZ4ECpLUlc_1OY"
+                Authorization: localStorage.getItem('token')
             }
         }).then((response) => {
             alert(response.data)
@@ -38,7 +38,6 @@ const FeedPage = () => {
     const onClickComments = (id) => {
         goToFeedComments(navigate, id)
     }
-
     const postCards = posts.map((post) => {
         return(
             <PostCard 
@@ -52,7 +51,7 @@ const FeedPage = () => {
         )
     })
 
-
+    // useEffect((createPost), [])
     return(
         <form onSubmit={onSubmitForm} >
             <InputCard

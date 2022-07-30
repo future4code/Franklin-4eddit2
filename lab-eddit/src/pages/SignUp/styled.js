@@ -18,13 +18,11 @@ width: 364px;
 /* height: 86px; */
 left: 32px;
 top: 123px;
-
 /* font-family: 'IBM Plex Sans'; */
 /* font-style: normal; */
 /* font-weight: 700; */
 font-size: 33px;
 /* line-height: 43px; */
-
 color: #373737;
 `  
 export const ButtonSignup = styled.button`
@@ -38,14 +36,12 @@ font-weight: bold;
 color: ${props => props.outline ? "#FE7E02" : "#FFFFFF"};
 font-size: 18px;
 line-height: 25px;
-
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 13px 133px;
 gap: 10px;
-
 position: absolute;
 width: 365px;
 height: 51px;
@@ -104,35 +100,9 @@ opacity: 0.8;
 padding: 10px;
 `
 export const Subtext = styled.p`
-font-family: 'Noto Sans';
-font-style: normal;
-font-weight: 400;
-line-height: 19px;
-font-size: 14px;
-/* text-align: left; */
-color: #000000;
-position: absolute;
-width: 361.02px;
-height: 38px;
-left: 34px;
-top: 664px;
-`
-export const Link = styled.a`
-color: blue;
-`
-export const InputBlock = styled.input`
-margin: 12.5px 0;
-`
-export const InputCheck = styled.p`
-position: absolute;
-width: 337.22px;
-height: 38px;
-left: 18.78px;
-top: 45px;
-font-weight: 400;
+width: 90%;
+font-family: 'IBM Plex Sans', sans-serif;
 font-size: 14px;
 line-height: 19px;
-
-color: #000000;
-
+text-align: left
 `

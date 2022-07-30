@@ -4,7 +4,7 @@ export const goToHome = (navigate) => {
 }
 
 export const goToCadastre = (navigate) => {
-    navigate("/cadastre")
+    navigate("/signup")
 }
 
 export const goToFeedPage = (navigate) => {

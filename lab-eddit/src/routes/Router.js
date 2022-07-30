@@ -10,8 +10,9 @@ const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />}/>
+                {/* <Route path="/" element={<Home goToCadastre={goToCadastre}/>}/> */}
                 <Route path="/signup" element={<Cadastre />}/>
-                <Route path="/feed" element={<FeedPage />}/>
+                <Route path="/posts" element={<FeedPage />}/>
                 <Route path="/comments/:id" element={<FeedComments />}/>
             </Routes>
         </BrowserRouter>

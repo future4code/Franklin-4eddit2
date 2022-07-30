@@ -1,11 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { goToCadastre } from "../../routes/coordinator";
 import { BASE_URL } from "../../constants/url";
 import useForm from "../../hooks/useForm";
 import { Container} from "../Home/styled";
-import { Title, InputUser, InputEmail, InputPassword, ButtonSignup, Form, Subtext } from "./styled";
+import { Title, InputUser, InputEmail, InputPassword, ButtonSignup, Form, Subtext, Link, InputBlock, InputCheck} from "./styled";
 
 
 
@@ -32,19 +32,14 @@ export default function Cadastre (){
             {/* cabeçalho */}
             <Title>Olá, seja bem vindo ao LabEddit</Title>
             <Form onSubmit={submitForms}>
-                <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username}/>
-                {/* <Input required type = "text" placeholder = "Nome de usuário" onChange = {onChange(onChange)} value = {form.username}/> */}
-                <InputEmail required type = "email" placeholder = "Email" value = {form.email}/>
-                <InputPassword required type = "password" placeholder = "Senha" value = {form.password}/>
+                <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username} onChange = {onChange}/>
+                <InputEmail required type = "email" placeholder = "Email" value = {form.email} onChange = {onChange}/>
+                <InputPassword required type = "password" placeholder = "Senha" value = {form.password} onChange = {onChange} />
             
                 <Subtext>
-                    <p>Ao continuar, você concorda com o nosso</p>
+                    <p>Ao continuar, você concorda com o nosso { " " } <Link href = "#"> Contrato de Usuário </Link> e nossa <Link href="#">Política de Privacidade</Link></p>
+                    <InputBlock type="checkbox"/> <InputCheck>Eu concordo em receber emails sobre coisas legais da LabEddit!</InputCheck>
                 </Subtext>
-                {/* <Subtext>Ao continuar, você concorda com o nosso <link href="###">Contrato de Usuário</link> e a nossa <link href="###">Política de Privacidade</link></Subtext> */}
-{/* 
-                <p> 
-                    <Input type="checkbox"> <Subtext>Eu concordo em receber emails sobre coisas legais da LabEddit!</Subtext> </Input>
-                </p> */}
                 <ButtonSignup onClick={ goCadastre}> Cadastrar </ButtonSignup>
             </Form>
         </Container>
