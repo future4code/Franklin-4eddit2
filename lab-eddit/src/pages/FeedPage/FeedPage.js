@@ -6,11 +6,10 @@ import { BASE_URL } from "../../constants/url";
 import PostCard from "../../components/PostCard/PostCard";
 import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
-import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
 
 
-const FeedPage = () => {
+const FeedPage = ({onClickComments}) => {
     const navigate = useNavigate()
     const [form, handleInputChange, clear] = useForm({ title: "grupo2", body: ""})
 
@@ -35,9 +34,10 @@ const FeedPage = () => {
         createPost()
     }
 
-    const onClickComments = (id) => {
-        goToFeedComments(navigate, id)
-    }
+    // const onClickComments = (id) => {
+    //     goToFeedComments(navigate, id)
+    // }
+    console.log(posts)
     const postCards = posts.map((post) => {
         return(
             <PostCard 
@@ -46,7 +46,7 @@ const FeedPage = () => {
                 body={post.body}
                 commentCount={post.commentCount}
                 voteSum={post.voteSum}
-                onClick={() => onClickComments(post.id)}
+                onClick={() => onClickComments(navigate, post.id)}
             />
         )
     })

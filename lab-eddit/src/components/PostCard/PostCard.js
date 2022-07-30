@@ -20,7 +20,7 @@ const PostCard = (props) => {
             </ContainerIconsSetas>
             <ContainerIconComentario onClick={props.onClick}>
                 <p>{props.commentCount}</p>
-                <img src={Vector} alt=""/>
+                <img src={Vector} alt="ícone de comentário"/>
             </ContainerIconComentario>
             </Icons>
         </BoxStyle>

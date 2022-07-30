@@ -3,7 +3,7 @@ import FeedComments from '../pages/FeedComments/FeedComments';
 import FeedPage from '../pages/FeedPage/FeedPage';
 import Home from '../pages/Home/Home';
 import Cadastre from '../pages/SignUp/Cadastre'
-import { goToCadastre } from "./coordinator";
+import { goToCadastre, goToFeedComments } from "./coordinator";
 
 
 const Router = () => {
@@ -12,7 +12,7 @@ const Router = () => {
             <Routes>
                 <Route path="/" element={<Home goToCadastre={goToCadastre}/>}/>
                 <Route path="/signup" element={<Cadastre />}/>
-                <Route path="/posts" element={<FeedPage />}/>
+                <Route path="/posts" element={<FeedPage onClickComments={goToFeedComments}/>}/>
                 <Route path="/comments/:id" element={<FeedComments />}/>
             </Routes>
         </BrowserRouter>
