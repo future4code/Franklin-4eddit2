@@ -25,10 +25,10 @@ export default function Cadastre () {
                 <InputEmail required type = "email" placeholder = "Email" value = {form.email} onChange = {onChange}/>
                 <InputPassword required type = "password" placeholder = "Senha" value = {form.password} onChange = {onChange} />
             
-                <Subtext>
-                    <p>Ao continuar, você concorda com o nosso <Link href = "#"> Contrato de Usuário </Link> e nossa <Link href="#">Política de Privacidade</Link></p>
+            
+                    <Subtext>Ao continuar, você concorda com o nosso <Link href = "#"> Contrato de Usuário </Link> e nossa <Link href="#">Política de Privacidade</Link></Subtext>
                     <InputBlock type="checkbox"/> <InputCheck>Eu concordo em receber emails sobre coisas legais da LabEddit!</InputCheck>
-                </Subtext>
+               
                 <ButtonSignup onClick={ submitForms}> Cadastrar </ButtonSignup>
             </Form>
         </Container>
