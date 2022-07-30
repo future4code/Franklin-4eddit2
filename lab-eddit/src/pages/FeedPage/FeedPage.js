@@ -38,7 +38,6 @@ const FeedPage = () => {
     const onClickComments = (id) => {
         goToFeedComments(navigate, id)
     }
-console.log(posts)
     const postCards = posts.map((post) => {
         return(
             <PostCard 
@@ -52,7 +51,7 @@ console.log(posts)
         )
     })
 
-
+    // useEffect((createPost), [])
     return(
         <form onSubmit={onSubmitForm} >
             <InputCard

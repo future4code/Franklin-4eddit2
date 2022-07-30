@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import FeedComments from '../pages/FeedComments/FeedComments';
 import FeedPage from '../pages/FeedPage/FeedPage';
 import Home from '../pages/Home/Home';
-import Cadastre from '../pages/Home/Cadastre'
+import Cadastre from '../pages/SignUp/Cadastre'
 import { goToCadastre } from "./coordinator";
 
 
