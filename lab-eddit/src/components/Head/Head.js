@@ -1,13 +1,13 @@
 import React from "react";
 import horas from "../../assets/images/horas.svg"
-import StausIcons from "../../assets/images/StausIcons.svg"
-import { useNavigate } from "react-router-dom";
-import {Horas} from "styled-components";
+import StatusIcons from "../../assets/images/StatusIcons.svg"
+import {Horas, Icones} from "../Head/styled";
 
-export default function Head (){
+export function Head (){
     return(
         <div>
             <Horas src={horas}></Horas>
+            <Icones src={StatusIcons}></Icones>
         </div>
 
     )

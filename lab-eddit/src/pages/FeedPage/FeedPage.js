@@ -8,6 +8,7 @@ import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
+import { Head } from "../../components/Head/Head";
 
 
 const FeedPage = () => {
@@ -54,6 +55,7 @@ const FeedPage = () => {
     // useEffect((createPost), [])
     return(
         <form onSubmit={onSubmitForm} >
+            <Head/>
             <InputCard
                 name={"body"}
                 value={form.body}
