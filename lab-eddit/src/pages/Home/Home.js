@@ -8,10 +8,9 @@ import { signup } from "../../services/user"
 function HomePage({goToCadastre}) {
   const navigate = useNavigate()
   const [form, onChange, clear] = useForm({email:'', password:''})
-  const onSubmitLogin = (event) => {
+  const onSubmitLogin = async (event) => {
     event.preventDefault()
   signup(form, navigate, clear)
-  
   }
  
 

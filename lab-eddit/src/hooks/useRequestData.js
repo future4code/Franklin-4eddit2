@@ -16,7 +16,7 @@ const useRequestData = (initialData, url) => {
         })
     }, [url])
 
-    return(data)
+    return(data) //commitar esta alteração senão não retorna corretamente
 }
 
 export default useRequestData;

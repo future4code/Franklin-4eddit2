@@ -23,7 +23,7 @@ const FeedComments = () => {
     const createComment = () => {
         axios.post(`${BASE_URL}/posts/${params.id}/comments`, form, {
             headers: {
-                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTdmOWJlLTAxZTYtNDc5NC1hNjgxLWJlNjVlYTRhMWM0MyIsInJvbGUiOiJHVUVTVCIsImlhdCI6MTY1OTA1NjkzMSwiZXhwIjoxNjU5MTAwMTMxfQ.ik6Jz6I80yuIGJXRTdT2siAowGcQrRZ4ECpLUlc_1OY"
+                Authorization: localStorage.getItem('token')
             }
         }).then((response) => {
             alert(response.data)
