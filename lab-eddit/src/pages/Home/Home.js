@@ -3,14 +3,15 @@ import { Container, Logo, Input, Button, Line, Form } from "./styled";
 import logo from "../../assets/images/logo.png";
 import useForm from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
-import { signup } from "../../services/user"
+import { signIn } from "../../services/user"
 
 function HomePage({goToCadastre}) {
   const navigate = useNavigate()
   const [form, onChange, clear] = useForm({email:'', password:''})
+
   const onSubmitLogin = async (event) => {
     event.preventDefault()
-  signup(form, navigate, clear)
+  signIn(form, navigate, clear)
   }
  
 

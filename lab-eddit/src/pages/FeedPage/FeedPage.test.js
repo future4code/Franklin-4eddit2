@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import axios from 'axios';
@@ -31,9 +31,9 @@ describe("Na página de Feed", () => {
 
               ]
       })
-      const { findAllByText} = render(<FeedPage />)
+      render(<FeedPage />)
 
-      const listPosts = await findAllByText(/mensagem/i)
+      const listPosts = await screen.findAllByText(/mensagem/i)
       expect(axios.get).toHaveBeenCalledTimes(1)
     //  expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}/posts`)
      expect(listPosts).toHaveLength(2)
