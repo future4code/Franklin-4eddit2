@@ -9,7 +9,7 @@ import { Menu } from "../../components/Menu/Menu";
 
 export default function Cadastre () {  
     const navigate = useNavigate();
-    const [form, onChange] = useForm({ username:"", email:"", password:"" })
+    const [form, handleInputChange] = useForm({ username:"", email:"", password:"" })
     
    const submitForms = (event) => { 
         event.preventDefault() 
@@ -23,12 +23,13 @@ export default function Cadastre () {
         <Menu nome = {"Entrar"}></Menu>
         <Title>Olá, seja bem vindo ao LabEddit</Title>
         <Form onSubmit={submitForms}>
-            <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username} onChange = {onChange}/>
-            <InputEmail required type = "email" placeholder = "Email" value = {form.email} onChange = {onChange}/>
-            <InputPassword required type = "password" placeholder = "Senha" value = {form.password} onChange = {onChange} />
+            <InputUser required type = "text" placeholder = "Nome de usuário" value = {form.username} onChange = {handleInputChange}/>
+            <InputEmail required type = "email" placeholder = "Email" value = {form.email} onChange = {handleInputChange}/>
+            <InputPassword required type = "password" placeholder = "Senha" value = {form.password} onChange = {handleInputChange} />
             
             <Subtext>Ao continuar, você concorda com o nosso <Link href = "#"> Contrato de Usuário </Link> e nossa <Link href="#">Política de Privacidade</Link></Subtext>
-            <InputBlock type="checkbox"/> <InputCheck>Eu concordo em receber emails sobre coisas legais da LabEddit!</InputCheck>
+            <InputBlock type="checkbox"/> 
+            <InputCheck>Eu concordo em receber emails sobre coisas legais da LabEddit!</InputCheck>
                
             <ButtonSignup onClick={ submitForms}> Cadastrar </ButtonSignup>
         </Form>

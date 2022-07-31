@@ -9,7 +9,6 @@ export function Menu (props){
         <div>
             <BlocoCinza></BlocoCinza>
             <Logo src={IconLogo}></Logo>
-            {/* <Entrar nome={'Sasir'}></Entrar> */}
             <Entrar>{props.nome}</Entrar>
         </div>
 
