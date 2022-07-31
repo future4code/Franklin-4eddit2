@@ -10,7 +10,8 @@ const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home goToCadastre={goToCadastre}/>}/>
+                {/*<Route path="/" element={<Home />}/> */}
+                <Route path="/" element={<Home goToCadastre={goToCadastre}/>}/> 
                 <Route path="/signup" element={<Cadastre />}/>
                 <Route path="/posts" element={<FeedPage onClickComments={goToFeedComments}/>}/>
                 <Route path="/comments/:id" element={<FeedComments />}/>
