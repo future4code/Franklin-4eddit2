@@ -3,13 +3,13 @@ import styled from "styled-components";
 //CSS Cadastre
 export const Form = styled.form`
 margin-bottom: 56px;
-/* display: flex; */
-/* align-items: center; */
-/* flex-direction: column; */
-/* font-family: 'Times New Roman', Times, serif; */
-/* font-style: normal; */
-/* width: 100%; */
-/* margin-top: 194px; */
+display: flex;
+align-items: center;
+flex-direction: column;
+font-family: 'Times New Roman', Times, serif;
+font-style: normal;
+width: 100%;
+ margin-top: 194px;
 `
 
 export const Title = styled.h1`
@@ -103,6 +103,9 @@ font-size: 18px;
 opacity: 0.8;
 padding: 10px;
 `
+export const Termo = styled.div`
+display: block;
+`
 export const Subtext = styled.p`
 font-weight: 400;
 line-height: 19px;
@@ -119,8 +122,8 @@ export const Link = styled.a`
 color: blue;
 `
 export const InputBlock = styled.input`
-/* top:714px; */
-/* margin: 12.5px 0; */
+top:714px;
+margin: 12.5px 0;
 `
 export const InputCheck = styled.p`
 position: absolute;

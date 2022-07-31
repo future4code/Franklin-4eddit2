@@ -16,10 +16,6 @@ import InputCard from "../../components/InputCard/InputCard";
 import useProtected from "../../hooks/useProtected";
 import { Head } from "../../components/Head/Head";
 import { Menu } from "../../components/Menu/Menu";
-<<<<<<< HEAD
-=======
-
->>>>>>> e0aeae092dc852641e7a80b3168e9ba1d057b1d1
 
 const FeedPage = () => {
   const navigate = useNavigate();
@@ -54,6 +50,7 @@ const FeedPage = () => {
   const onClickComments = (id) => {
     goToFeedComments(navigate, id);
   };
+  
   const postCards = posts.map((post) => {
     return (
       <PostCard
