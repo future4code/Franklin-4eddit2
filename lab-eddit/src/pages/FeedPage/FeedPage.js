@@ -15,6 +15,7 @@ import { goToFeedComments } from "../../routes/coordinator";
 import InputCard from "../../components/InputCard/InputCard";
 import useProtected from "../../hooks/useProtected";
 import { Head } from "../../components/Head/Head";
+import { Menu } from "../../components/Menu/Menu";
 
 const FeedPage = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const FeedPage = () => {
   const onClickComments = (id) => {
     goToFeedComments(navigate, id);
   };
+  
   const postCards = posts.map((post) => {
     return (
       <PostCard
@@ -66,6 +68,7 @@ const FeedPage = () => {
     return(
         <form onSubmit={onSubmitForm} >
             <Head/>
+            <Menu nome = {"Logout"}></Menu>
             <InputCard
                 name={"body"}
                 value={form.body}
