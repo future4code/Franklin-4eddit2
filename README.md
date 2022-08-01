@@ -1,7 +1,7 @@
 <div align='center'>
 
 ## Labeddit
-
+<img src="./labeddit.png" alt="Logo com  nome LabEddit"/>
 </div>
 
 Integrantes: 
