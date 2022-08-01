@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import InputCard from "../../components/InputCard/InputCard";
 import useProtected from "../../hooks/useProtected";
 import { Head } from "../../components/Head/Head";
+import { Menu } from "../../components/Menu/Menu";
 
 const FeedPage = ({onClickComments}) => {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const FeedPage = ({onClickComments}) => {
     event.preventDefault();
     createPost();
   };
-
+  
     // const onClickComments = (id) => {
     //     goToFeedComments(navigate, id)
     // }
@@ -66,6 +67,7 @@ const FeedPage = ({onClickComments}) => {
     return(
         <form onSubmit={onSubmitForm} >
             <Head/>
+            <Menu nome = {"Logout"}></Menu>
             <InputCard
                 name={"body"}
                 value={form.body}

@@ -9,6 +9,7 @@ import useForm from "../../hooks/useForm";
 import axios from "axios";
 import useProtected from "../../hooks/useProtected";
 import { Head } from "../../components/Head/Head";
+import { Menu } from "../../components/Menu/Menu";
 
 
 const FeedComments = () => {
@@ -58,6 +59,7 @@ const FeedComments = () => {
   return (
      <form onSubmit={onSubmitForm}>
             <Head/>
+            <Menu nome = {"Logout"}></Menu>
             <h1>FeedComment</h1>
             <InputCard
                 name={"body"}
