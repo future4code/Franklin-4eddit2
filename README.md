@@ -3,13 +3,16 @@
 ## Labeddit
 <img src="./labeddit.png" alt="Logo com  nome LabEddit"/>
 </div>
-## Rodando o projeto :rocket:
+
+### Rodando o projeto :rocket:
 
 Surge: https://franklin-4eddit2.surge.sh/
+
 Login: grupo2@gmail.com
+
 Senha: grupo2.girls
 
-###Integrantes: 
+### Integrantes: 
 
 <div>
     <table>
