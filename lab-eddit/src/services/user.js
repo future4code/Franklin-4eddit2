@@ -8,7 +8,7 @@ export const signIn = (body, navigate, clear) => {
             localStorage.setItem('token', response.data.token)
             goToFeedPage(navigate)
         }).catch((error) => {
-            // alert("Falha ao logar, verifique suas credenciais !!")
+            //  alert("Falha ao logar, verifique suas credenciais !!")
             // clear()    
         })
     }
@@ -18,8 +18,11 @@ export const signIn = (body, navigate, clear) => {
         .post(`${BASE_URL}/users/signup`, body)
         .then(response => {
                 localStorage.setItem('token', response.data.token);
-                // alert ("Realizado o Cadastro do Usuário");
+                //  alert ("Realizado o Cadastro do Usuário");
                 goToCadastre(navigate)
             })
-            .catch(erro => console.log(erro))
+            .catch((erro) => {
+                console.log(erro)
+            })
+           
         }
